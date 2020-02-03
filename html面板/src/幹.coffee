@@ -20,10 +20,12 @@ $ ->
                 handler: (val, oldVal) ->
                     山彥.vue更新(val)
                 deep: true
-    山彥.vue連接初始化((x) ->
-        for a, b of x
-            v[a] = b
-    )
+    # 山彥.vue連接初始化((x) ->
+    #     for a, b of x
+    #         v[a] = b
+    # )
+    山彥.vue連接初始化()
+	
     
     響應表 = 
         開啓工程: ->

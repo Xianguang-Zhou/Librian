@@ -2,6 +2,25 @@
     <head>
         <meta charset='utf-8'/>
         <link rel='stylesheet' href='../黑科技/synthetic_css/synthetic_offline.css'/>
+		<script src='qrc:///qtwebchannel/qwebchannel.js'></script>
+		<script>
+new QWebChannel(qt.webChannelTransport, function (channel) {
+	for (name in channel.objects) {
+		window[name] = channel.objects[name];
+	}
+});
+async function call(func, ...params) {
+	return new Promise((resolve, reject) => {
+		try {
+			func(...params, (returnValue) => {
+				resolve(returnValue);
+			});
+		} catch (ex) {
+			reject(ex);
+		}
+	});
+}
+		</script>
         <script src='./dist/bundle.js'></script>
     </head>
     <body class="synth">

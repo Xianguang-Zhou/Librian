@@ -7,11 +7,11 @@ import shutil
 import datetime
 from pathlib import Path
 
-import wx
+import fake_wx as wx
 import yaml
 import dulwich.repo
 
-from Librian本體 import wxcef
+from Librian本體 import fake_wxcef as wxcef
 from Librian本體.帶有vue的山彥 import 帶有vue的山彥
 from Librian本體.Librian虛擬機 import 虛擬機環境
 from Librian本體.Librian虛擬機.util import 加載器

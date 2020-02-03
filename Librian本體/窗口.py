@@ -1,6 +1,6 @@
 import logging
 
-import wxcef
+import fake_wxcef as wxcef
 import 山彥
 from 環境 import 配置
 

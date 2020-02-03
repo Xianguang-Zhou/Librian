@@ -2,6 +2,7 @@ html:
     head:
         meta charset='utf-8'; 
         link rel='stylesheet' href='../黑科技/synthetic_css/synthetic_offline.css';
+		script src='qrc:///qtwebchannel/qwebchannel.js';
         script src='./dist/bundle.js':
 
     body.synth:
